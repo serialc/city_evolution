@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+ <title>City Evolution</title>
+ <link media='screen' href='css/jsg.css' type='text/css' rel='stylesheet' />
+ <link media='screen' href='css/jquery-ui-1.8.10.custom.css' type='text/css' rel='stylesheet' />
+ <script src="js/jquery-1.5.1.min.js"></script>
+ <script src="js/jquery-ui-1.8.10.custom.min.js"></script>
+ <script src="js/svglib.js"></script>
+ <script src="js/jsg-grid.js"></script>
+ <script src="js/jsg-hex.js"></script>
+</head>
+<body>
+<div id='cont'>
+<div id='header'>
+
+<div id='b1'><h1>City Evolution</h1>
+<p>City Evolution (CE) shows the emergence of city patterns based on agent preferences. CE allows you to vary five model parameters and observe how residents and road distribution evolve.</p>
+<p>In additon to seeing how altering parameters change city patterns, you can also see a side by side comparsion of rectangular versus hexagonal tessalation outcomes.</p></div>
+
+<div id='b2'><h2>The Parameters</h2>
+<img class='picon' src='imgs/green.png'><p>Green preference: The agent's desire for green within their neighbourhood.</p>
+<img class='picon' src='imgs/social.png'><p>Social preference: The agent's desire to live near other homes.</p>
+<img class='picon' src='imgs/neighbourhood.png'><p>Neighbourhood size: The size of the neighbourhood an agent considers when counting green cells and homes within proximity.</p>
+<img class='picon' src='imgs/transport.png'><p>Transport cost: The cost of traveling one cell in order to reach the central business district (the center of the crossroad).</p>
+<img class='picon' src='imgs/agrirent.png'><p>Agricultural rent: The rent paid for agricultural rent and the cost of replacing green (farmland) cells with roads or houses.</p></div>
+
+</div>
+
+<div id='main'>
+<h1>CE Model</h1>
+<!-- used to style SVG so it is printable -->
+<style type="text/css">
+.border {
+	fill: none;
+	stroke: blue;}
+.field {
+	fill: #8c8;}
+.road {
+	fill: #555;}
+.house {
+	fill: #c88;}
+</style>
+
+
+<div id='gridf'>
+<svg id='svg_canvas' width='350' height='350'>
+<g id='lattice'>
+</g>
+</svg>
+<div id='output'>
+</div>
+</div><!-- end of gridf -->
+
+<div id='conf'>
+<table>
+<tr><td><img src='imgs/green-s.png'></td><td>Green preference: <span id='g-val'>0.25</span>
+<div id='g-slider' class='slide'></div>
+</td></tr>
+
+<tr><td><img src='imgs/social-s.png'></td><td>Social preference: <span id='s-val'>0.1</span>
+<div id='s-slider' class='slide'></div>
+</td></tr>
+
+<tr><td><img src='imgs/neighbourhood-s.png'></td><td>Neighbourhood size: <span id='n-val'>3</span>
+<div id='n-slider' class='slide'></div>
+</td></tr>
+
+<tr><td><img src='imgs/transport-s.png'></td><td>Transport cost: <span id='t-val'>0.5</span>
+<div id='t-slider' class='slide'></div>
+</td></tr>
+
+<tr><td><img src='imgs/agrirent-s.png'></td><td>Agricultural rent: <span id='a-val'>10</span>
+<div id='a-slider' class='slide'></div>
+</td></tr>
+
+</table>
+
+<input id='strtbut' onclick='JG.start()' type='submit' value='Start'/>
+</div><!-- end of conf -->
+
+<div id='hexf'>
+<svg id='svg_canvas_hex' width='306' height='350'>
+<g id='hexlattice'>
+</g>
+</svg>
+<div id='hexoutput'>
+</div>
+</div><!-- end of hexf -->
+
+<h2>Results</h2>
+<table id='tresults'>
+<thead><tr><td colspan='6'>Parameter settings</td><td colspan='4'>Grid results</td><td colspan='4'>Hex results</td></tr></thead>
+<tr>
+<td title='Green preference'>GP</td><td title='Social preference'>SP</td><td title='Green/Social preference ratio'>G/S</td><td title='Neighbourhood size'>NS</td><td title='Transport cost'>TC</td><td title='Agricultural rent'>AR</td>
+<td title='Houses placed'>HP</td><td title='Roads built'>RB</td><td title='Average travel distance'>ATD</td><td title='Completed successfully'>Result</td>
+<td title='Houses placed'>HP</td><td title='Roads built'>RB</td><td title='Average travel distance'>ATD</td><td title='Completed successfully'>Result</td>
+</tr>
+
+</table>
+
+
+</div><!-- end of main -->
+<div id='footer'>
+<p>Based on work by:<br>
+Jean Cavailh&egrave;s, Pierre Frankhauser, Geoffrey Caruso, Dominique Peesters, Isabelle Thomas and Gilles Vuidel. 2009.<br>
+Morphological Similarities between DBM and an Economic Geography Model of City Growth. Complex Sciences. 4(1). pp. 417-428.<br>
+[<a href='http://www.springerlink.com/content/wk12652186q88434/' target='_blank'>article abstract</a>]
+</p>
+<p>Cyrille M&eacute;dard de Chardon &copy; 2011</p>
+</div>
+</div>
+</body>
+</html>

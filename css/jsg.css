@@ -1,0 +1,130 @@
+body {
+	background-color: #444;
+	text-align: center;
+	font-family: Georgia,Palatino,'Palatino Linotype',serif;
+	font-size: 1.1em;
+	}
+
+	
+/** main containers **/
+#cont {
+	margin: 0 auto;
+	width: 920px;
+	background-color: white;
+	text-align: left;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.9);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,.9);
+	box-shadow: 0 0 15px rgba(0,0,0,.9);
+	}
+
+#header {
+	padding: 10px;
+	overflow: auto;
+	}
+	
+#main {
+	overflow: auto;
+	}
+
+	#main h1, #main h2 {
+		padding-left: 10px;
+	}
+	
+#footer {
+	clear: both;
+	padding: 10px;
+	color: #666;
+	background-color: black;
+	font-size: 0.7em;
+	}
+	
+/** Heading **/
+h1,h2, h3{
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+	}
+
+h2 {
+	font-size: 1.5em;
+}
+
+/** Misc. Styling **/
+#gridf, #hexf, #conf {
+	float: left;
+	display: block;
+	width: 350px;
+	min-height: 360px;
+	margin-left: 10px;
+}
+
+#hexf {
+	width: 310px;
+}
+
+#conf {
+	width: 220px;
+	font-size: 0.8em;
+	}
+
+.slide {
+	width:120px;
+	margin: 5px 3px;
+	}
+
+#g-val, #s-val, #n-val, #t-val, #a-val {
+	font-weight: bold;
+	float: right;
+	width: 35px;
+	text-align: left;
+	}
+
+input {
+	margin-top: 10px;
+	width: 90%;
+	height: 30px;
+	}
+
+table {
+	width: 100%;
+}
+
+table#tresults {
+	padding: 0 10px 30px 10px;
+}
+
+#b1, #b2 {
+	display: block;
+	float: left;
+	width: 450px;
+}
+
+#b1 {
+	padding: 10px 50px 0 10px;
+	width: 300px;
+}
+
+#b2 {
+	padding-top: 50px;
+	width: 500px;
+}
+	#b2 p {
+		margin-top: 10px;
+		float: left;
+		width: 430px;
+		/*height: 30px;*/
+		display: block;
+	}
+.picon {
+	float: left;
+	clear: left;
+	padding: 10px 10px;
+}
+
+a, a:visited {
+	color: white;
+}
+
+a:hover, a:active {
+	color: #aaa;
+}

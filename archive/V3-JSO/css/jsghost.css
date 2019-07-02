@@ -1,0 +1,15 @@
+.cell {
+	background-color: blue;
+	float: left;
+	width: 5px;
+	height: 5px;}
+	
+.clear {
+	clear: both;}
+
+.field {
+	background-color: #8c8;}
+.road {
+	background-color: #555;}
+.house {
+	background-color: #c88;}
